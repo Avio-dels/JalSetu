@@ -31,7 +31,7 @@
 
 *Field-deployable RWH assessment. Site-specific engineering design. Under 5 minutes.*
 
-[Live Demo](https://jal-setu-puce.vercel.app/) · [Report a Bug](#) · [Request a Feature](#)
+[Live Demo](https://jal-setu-puce.vercel.app/) · [Report a Bug](nagdiveayush@gmail.com) · [Request a Feature](nagdiveayush@gmail.com)
 
 </div>
 
@@ -56,7 +56,8 @@
 - [Team](#-team)
 
 ---
-
+## Live Demo 
+Live Demo (https://jal-setu-puce.vercel.app/)
 ## 💡 Why We Built This
 
 India's water crisis is not a supply problem alone — it is an **access-to-expertise problem**.
