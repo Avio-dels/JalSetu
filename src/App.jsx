@@ -613,7 +613,7 @@ function Step3Panel({ buildingType, setBuildingType, population, setPopulation, 
   const onLPCD = useCallback((v) => setCustomLPCD(v), [setCustomLPCD]);
   return (
     <div>
-      <SecTitle icon="🦫">Water Demand Assessment</SecTitle>
+      <SecTitle icon="💧">Water Demand Assessment</SecTitle>
 
       <div style={fieldWrap}>
         <label style={labelStyle}>Building Type</label>
@@ -746,7 +746,7 @@ function ResultsPanel({ isMobile, derived }) {
       {activeTab === "overview" && (
         <>
           <div style={{ display:"grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4,1fr)", gap:"0.75rem", marginBottom:"0.85rem" }}>
-            <MetricCard label="Annual Runoff"    icon="🦫" value={annualRunoff.toFixed(0)} unit="m³ / year" color={C.hydroBlue}   sub={`${(annualRunoff*1000).toFixed(0)} L · FF=${firstFlushPct}%`} badge="IS:15797" />
+            <MetricCard label="Annual Runoff"    icon=" 🌧️ " value={annualRunoff.toFixed(0)} unit="m³ / year" color={C.hydroBlue}   sub={`${(annualRunoff*1000).toFixed(0)} L · FF=${firstFlushPct}%`} badge="IS:15797" />
             <MetricCard label="Annual Demand"    icon="🏠" value={annualDemand.toFixed(0)}  unit="m³ / year" color={C.soilAmber}   sub={`${(dailyDemand*1000).toFixed(0)} L/day · ${lpcd} lpcd`} badge="IS:1172" />
             <MetricCard label="WSE"              icon="📊" value={`${wse}%`}                unit="Water Saving Eff." color={wse>=60?C.rechargeGreen:wse>=35?C.soilAmber:C.overflowRed} sub={`Reliability: ${reliability}%`} />
             <MetricCard label="Non-Potable Cover" icon="🚿" value={`${nonPotableWse}%`}    unit="of non-potable demand" color={C.wseViolet} sub={`${(nonPotablePct*100).toFixed(0)}% of demand non-potable`} />
