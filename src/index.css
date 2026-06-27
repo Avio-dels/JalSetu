@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background: #F7FAFC;
+  color: #1E293B;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-thumb { background: #D7DEE5; border-radius: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Step bar mobile scrollability */
+.step-bar { overflow-x: auto; scrollbar-width: none; }
+.step-bar::-webkit-scrollbar { display: none; }
+
+/* Mobile metric grid */
+@media (max-width: 768px) {
+  .metrics-grid-4 { grid-template-columns: 1fr 1fr !important; }
+  .metrics-grid-4-sm { grid-template-columns: 1fr 1fr !important; }
+  .tank-grid { grid-template-columns: 1fr !important; }
+  .left-panel { width: 100% !important; border-right: none !important; border-bottom: 1px solid #D7DEE5 !important; }
+  .body-layout { flex-direction: column !important; }
+  .right-panel { padding: 1rem !important; }
+  .header-refs { display: none !important; }
+  .header-title-sub { font-size: 0.5rem !important; }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid-4 { grid-template-columns: 1fr !important; }
+}
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white; }
+}
+
+/* Smooth transitions */
+.metric-card { transition: box-shadow 0.15s ease, transform 0.15s ease; }
+.metric-card:hover { box-shadow: 0 4px 16px rgba(15,76,129,0.12) !important; transform: translateY(-1px); }
+
+.step-btn { transition: all 0.15s ease; }
+.step-btn:hover { opacity: 0.85; }
+
+.nav-btn { transition: background 0.15s ease, transform 0.1s ease; }
+.nav-btn:active { transform: scale(0.98); }
+
+/* Animated progress bar */
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}
+
+.progress-fill {
+  animation: fillBar 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Pulse for live values */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 0.3s ease; }
+
+/* Toast */
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(8px) translateX(-50%); }
+  to { opacity: 1; transform: translateY(0) translateX(-50%); }
+}
+
+.toast {
+  animation: toastIn 0.25s ease;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1E293B;
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  border-radius: 100px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 9999;
+  white-space: nowrap;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
