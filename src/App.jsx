@@ -778,8 +778,8 @@ function ResultsPanel({ isMobile, derived }) {
       {activeTab === "overview" && (
         <>
           <div style={{ display:"grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4,1fr)", gap:"0.75rem", marginBottom:"0.85rem" }}>
-            <MetricCard label="Annual Runoff"    icon=" 🌧️ " value={annualRunoff.toFixed(0)} unit="m³ / year" color={C.hydroBlue}   sub={`${(annualRunoff*1000).toFixed(0)} L · FF=${firstFlushPct}%`} badge="IS:15797" />
-            <MetricCard label="Annual Demand"    icon="🏠" value={annualDemand.toFixed(0)}  unit="m³ / year" color={C.soilAmber}   sub={`${(dailyDemand*1000).toFixed(0)} L/day · ${lpcd} lpcd`} badge="IS:1172" />
+            <MetricCard label="Annual Runoff"    icon=" 🌧️ " value={annualRunoff.toFixed(0)} unit="m³ / year" color={C.hydroBlue}   sub={`${(annualRunoff*1000).toFixed(0)} L · FF=${firstFlushPct}%`} />
+            <MetricCard label="Annual Demand"    icon="🏠" value={annualDemand.toFixed(0)}  unit="m³ / year" color={C.soilAmber}   sub={`${(dailyDemand*1000).toFixed(0)} L/day · ${lpcd} lpcd`} />
             <MetricCard label="WSE"              icon="📊" value={`${wse}%`}                unit="Water Saving Eff." color={wse>=60?C.rechargeGreen:wse>=35?C.soilAmber:C.overflowRed} sub={`Reliability: ${reliability}%`} />
             <MetricCard label="Non-Potable Cover" icon="🚿" value={`${nonPotableWse}%`}    unit="of non-potable demand" color={C.wseViolet} sub={`${(nonPotablePct*100).toFixed(0)}% of demand non-potable`} />
           </div>
@@ -1209,7 +1209,7 @@ export default function JalSetuV6() {
         {!isMobile && (
           <div style={{ fontSize:"0.57rem", color:"rgba(255,255,255,0.35)", textAlign:"right", lineHeight:1.75 }}>
             <div>IS:15797:2008 · IS:1172 · CGWB Guidelines</div>
-            <div>Multi-Block WSE Engine · &lt;0.1% deviation validated</div>
+            <div>Multi-Block WSE Engine</div>
           </div>
         )}
       </div>
