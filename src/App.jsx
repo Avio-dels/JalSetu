@@ -1176,7 +1176,7 @@ export default function JalSetuV6() {
         {!isMobile && (
           <div style={{ fontSize:"0.57rem", color:"rgba(255,255,255,0.35)", textAlign:"right", lineHeight:1.75 }}>
             <div>IS:15797:2008 · IS:1172 · CGWB Guidelines</div>
-            <div>Multi-Block WSE Engine · &lt;</div>
+            <div>Multi-Block WSE Engine;</div>
           </div>
         )}
       </div>
