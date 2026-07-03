@@ -1577,7 +1577,7 @@ function ResultsPanel({ isMobile, derived }) {
                   ["Soil Type", soilType], ["GW Depth", `${gwDepth}m BGL`],
                   ["Recharge Score", `${rScore}/100`], ["Recharge System", rRec.type],
                 ];
-                const text = `JalSetu AI — Rooftop RWH Assessment\n${"─".repeat(40)}\n${rows.map(([k, v]) => `${k.padEnd(22)} ${v}`).join("\n")}`;
+                const text = `JalSetu — Rooftop RWH Assessment\n${"─".repeat(40)}\n${rows.map(([k, v]) => `${k.padEnd(22)} ${v}`).join("\n")}`;
                 navigator.clipboard.writeText(text).then(() => alert("Summary copied to clipboard!"));
               }}
               style={{
