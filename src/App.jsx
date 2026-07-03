@@ -1590,7 +1590,7 @@ function ResultsPanel({ isMobile, derived }) {
             <button
               onClick={() => {
                 const data = {
-                  app: "JalSetu AI v6", generatedAt: new Date().toISOString(),
+                  app: "JalSetu v6", generatedAt: new Date().toISOString(),
                   site: { district, rainfall: rainNum, slope: slopeNum, firstFlushPct, dryMonths: dryMos, gwDepth, soilType },
                   catchment: { totalArea, weightedC, roofBlocks, annualRunoff },
                   demand: { buildingType, population: popNum, lpcd, dailyDemand, annualDemand, supplyRatio },
