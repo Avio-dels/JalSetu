@@ -1989,7 +1989,7 @@ export default function JalSetuV6() {
               fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
               fontSize: isMobile ? "1.1rem" : "1.3rem", color: "#fff", letterSpacing: "0.04em", lineHeight: 1,
             }}>
-              JalSetu-Rain Water Harvesting Assistant <span style={{ fontSize: "0.65rem", fontWeight: 500, opacity: 0.5, marginLeft: "0.2rem" }}>v6</span>
+              JalSetu <span style={{ fontSize: "0.65rem", fontWeight: 500, opacity: 0.5, marginLeft: "0.2rem" }}>v6</span>
             </div>
             <div style={{
               fontSize: isMobile ? "0.45rem" : "0.52rem", color: "rgba(255,255,255,0.45)", letterSpacing: "0.12em",
